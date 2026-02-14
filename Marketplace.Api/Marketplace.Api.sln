@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Api", "Marketplace.Api.csproj", "{BB73E192-15DD-4D8D-894D-A950F959DABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.BusinessLogic", "..\Marketplace.BusinessLogic\Marketplace.BusinessLogic.csproj", "{57776E96-8704-4A91-B871-F4EA09887E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.DataAccess", "..\Marketplace.DataAccess\Marketplace.DataAccess.csproj", "{44477776-E460-4036-AC7A-6939DA511882}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{BB73E192-15DD-4D8D-894D-A950F959DABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB73E192-15DD-4D8D-894D-A950F959DABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB73E192-15DD-4D8D-894D-A950F959DABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57776E96-8704-4A91-B871-F4EA09887E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57776E96-8704-4A91-B871-F4EA09887E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57776E96-8704-4A91-B871-F4EA09887E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57776E96-8704-4A91-B871-F4EA09887E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44477776-E460-4036-AC7A-6939DA511882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44477776-E460-4036-AC7A-6939DA511882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44477776-E460-4036-AC7A-6939DA511882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44477776-E460-4036-AC7A-6939DA511882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
