@@ -1,0 +1,95 @@
+﻿:root {
+  /* base */
+  --bg: #ffffff;
+  --bg-secondary: #f0f0f0;
+  --text: #111827;
+  --text-secondary: #6b7280;
+
+  /* surfaces */
+  --card: #f3f4f6;
+  --border: #e5e7eb;
+
+  /* brand */
+  --primary: #2947ef;
+  --primary-hover: #2563eb;
+  --primary-contrast: #ffffff;
+
+  /* states */
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+
+  /* form */
+  --input-bg: #ffffff;
+  --input-text: #111827;
+  --input-border: #d1d5db;
+  --input-border-hover: #9ca3af;
+  --input-border-focus: #2563eb;
+  --input-placeholder: #9ca3af;
+  --input-disabled-bg: #f3f4f6;
+  --input-disabled-text: #9ca3af;
+  --input-label: #374151;
+  --focus-shadow: rgba(37, 99, 235, 0.15);
+  --error-shadow: rgba(239, 68, 68, 0.15);
+
+  /* button */
+  --button-bg: #f9f9f9;
+  --button-text: #111827;
+  --button-hover-bg: #e5e5e5;
+
+  /* misc */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--text);
+}
+
+:root[data-theme="dark"] {
+  /* base */
+  --bg: #0b1220;
+  --bg-secondary: #1a1f2e;
+  --text: #e5e7eb;
+  --text-secondary: #9ca3af;
+
+  /* surfaces */
+  --card: #111827;
+  --border: #1f2937;
+
+  /* brand */
+  --primary: #6d7dff;
+  --primary-hover: #5a6eff;
+  --primary-contrast: #0b1220;
+
+  /* states */
+  --danger: #f87171;
+  --danger-hover: #ef4444;
+
+  /* form */
+  --input-bg: #0f172a;
+  --input-text: #e5e7eb;
+  --input-border: #334155;
+  --input-border-hover: #475569;
+  --input-border-focus: #6d7dff;
+  --input-placeholder: #64748b;
+  --input-disabled-bg: #1e293b;
+  --input-disabled-text: #475569;
+  --input-label: #cbd5e1;
+  --focus-shadow: rgba(109, 125, 255, 0.3);
+  --error-shadow: rgba(248, 113, 113, 0.3);
+
+  /* button */
+  --button-bg: #1e293b;
+  --button-text: #e5e7eb;
+  --button-hover-bg: #334155;
+
+  /* misc */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
