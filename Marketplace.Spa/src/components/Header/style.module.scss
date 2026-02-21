@@ -1,0 +1,27 @@
+﻿.header{
+  display: flex;
+  background-color: var(--primary);
+  color: var(--text-secondary);
+}
+.container{
+  width: 1170px;
+  padding: 10px 0 10px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+.headerNavigation{
+  display: flex;
+  width: 260px;
+  justify-content: space-between;
+  a{
+    color: var(--text-secondary);
+  }
+}
+.Logo{
+  color: var(--text-secondary);
+}
+
+
