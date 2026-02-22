@@ -2,10 +2,11 @@
 import { useFormik } from "formik";
 import style from "./style.module.scss";
 import { Button, TextField } from "@mui/material";
-import { useRegistrationMutation } from "../../api/userApi.ts";
+
+import { registration } from "../../api/index.ts";
 
 const validationSchema = yup.object({
-  username: yup
+  name: yup
     .string()
     .min(3, "Must be longer than 3")
     .max(15, "One step too many")
@@ -26,26 +27,29 @@ const validationSchema = yup.object({
 const RegistrationForm = () => {
   const formik = useFormik({
     initialValues: {
-      username: "",
+      name: "",
       email: "",
       password: "",
       phone: "",
+      createdAt: new Date(),
     },
     validationSchema,
 
-    onSubmit: async (values) => {},
+    onSubmit: async (values) => {
+      registration(values);
+    },
   });
   return (
     <div className={style.registrationForm}>
       <form className={style.form} onSubmit={formik.handleSubmit}>
         <TextField
-          name={"username"}
-          label="Username"
-          placeholder="Username"
+          name={"name"}
+          label="name"
+          placeholder="name"
           onChange={formik.handleChange}
-          value={formik.values.username}
-          error={Boolean(formik.touched.username && formik.errors.username)}
-          helperText={formik.touched.username && formik.errors.username}
+          value={formik.values.name}
+          error={Boolean(formik.touched.name && formik.errors.name)}
+          helperText={formik.touched.name && formik.errors.name}
         />
         <TextField
           name={"email"}
