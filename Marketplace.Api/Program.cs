@@ -13,7 +13,20 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<MarketplaceDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 🔥 Регистрируем сервисы BusinessLogic
+// 🔥 CORS ДО build()
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173") // твой фронт
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
+
+// 🔥 BusinessLogic
 builder.Services.Configure<TokenSettings>(
     builder.Configuration.GetSection("TokenSettings"));
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
@@ -31,6 +44,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// 🔥 CORS ПОСЛЕ build() и ДО Authorization
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 

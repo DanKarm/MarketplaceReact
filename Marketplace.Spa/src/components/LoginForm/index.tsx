@@ -2,6 +2,8 @@
 import { useFormik } from "formik";
 import style from "./style.module.scss";
 import { Button, TextField } from "@mui/material";
+import type {ILoginUser} from "../../entity/IUser.ts";
+import {login} from "../../api";
 
 const validationSchema = yup.object({
   email: yup.string().email("Invalid email").required("This field is required"),
@@ -15,14 +17,15 @@ const validationSchema = yup.object({
 const LoginnForm = () => {
   const formik = useFormik({
     initialValues: {
-      username: "",
       email: "",
       password: "",
-      phone: "",
     },
     validationSchema,
 
-    onSubmit: async (values) => {},
+    onSubmit: async (values:ILoginUser) => {
+        const token = login(values);
+        console.log(token);
+    },
   });
   return (
     <div className={style.registrationForm}>

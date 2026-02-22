@@ -6,11 +6,16 @@ import { Button, TextField } from "@mui/material";
 import { registration } from "../../api/index.ts";
 
 const validationSchema = yup.object({
-  name: yup
+    firstName: yup
     .string()
     .min(3, "Must be longer than 3")
     .max(15, "One step too many")
     .required("This field is required"),
+    lastName: yup
+        .string()
+        .min(3, "Must be longer than 3")
+        .max(15, "One step too many")
+        .required("This field is required"),
   email: yup.string().email("Invalid email").required("This field is required"),
   password: yup
     .string()
@@ -27,11 +32,11 @@ const validationSchema = yup.object({
 const RegistrationForm = () => {
   const formik = useFormik({
     initialValues: {
-      name: "",
+      firstName: "",
+        lastName:"",
       email: "",
       password: "",
       phone: "",
-      createdAt: new Date(),
     },
     validationSchema,
 
@@ -43,13 +48,22 @@ const RegistrationForm = () => {
     <div className={style.registrationForm}>
       <form className={style.form} onSubmit={formik.handleSubmit}>
         <TextField
-          name={"name"}
-          label="name"
-          placeholder="name"
+          name={"firstName"}
+          label="firstName"
+          placeholder="firstName"
           onChange={formik.handleChange}
-          value={formik.values.name}
-          error={Boolean(formik.touched.name && formik.errors.name)}
-          helperText={formik.touched.name && formik.errors.name}
+          value={formik.values.firstName}
+          error={Boolean(formik.touched.firstName && formik.errors.firstName)}
+          helperText={formik.touched.firstName && formik.errors.firstName}
+        />
+          <TextField
+          name={"lastName"}
+          label="lastName"
+          placeholder="lastName"
+          onChange={formik.handleChange}
+          value={formik.values.lastName}
+          error={Boolean(formik.touched.lastName && formik.errors.lastName)}
+          helperText={formik.touched.lastName && formik.errors.lastName}
         />
         <TextField
           name={"email"}
