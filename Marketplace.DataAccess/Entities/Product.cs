@@ -12,6 +12,8 @@ public class Product
     public string CategoryName { get; set; } = null!;
 
     public DateTime CreatedAt { get; set; }
+    
+    public string? ImageUrl { get; set; }
 
     public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
     public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

@@ -27,10 +27,11 @@ builder.Services.AddCors(options =>
 });
 
 // 🔥 BusinessLogic
-builder.Services.Configure<TokenSettings>(
-    builder.Configuration.GetSection("TokenSettings"));
+builder.Services.Configure<TokenSettings>(builder.Configuration.GetSection("TokenSettings"));
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IHashHelper, HashHelper>();
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
