@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import style from "./style.module.scss";
 import { Button, TextField } from "@mui/material";
 import type {ILoginUser} from "../../entity/IUser.ts";
-import {login} from "../../api";
+import {login} from "../../api/userApi.ts";
 
 const validationSchema = yup.object({
   email: yup.string().email("Invalid email").required("This field is required"),

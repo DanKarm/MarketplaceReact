@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import style from "./style.module.scss";
 import { Button, TextField } from "@mui/material";
 
-import { registration } from "../../api/index.ts";
+import { registration } from "../../api/userApi.ts";
 
 const validationSchema = yup.object({
     firstName: yup

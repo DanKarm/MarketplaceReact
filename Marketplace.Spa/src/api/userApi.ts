@@ -1,38 +1,35 @@
-﻿import { createApi } from "@reduxjs/toolkit/query/react";
-import baseQuery from "./baseQuery.ts";
-interface RegistrationRequest {
-  username: string;
-  email: string;
-  password: string;
-  phone: string;
+﻿import type { ILoginUser, IRegistrationUser } from "../entity/IUser";
+import { createApi } from "./apiFactory";
+import {AccessTokenStorage} from "../services/AuthStorage.ts";
+
+
+interface ILoginResponse {
+    token: string | null;
 }
+const Marketplace_API_BASE_URL = "https://localhost:44367/";
 
-interface RegistrationResponse {
-  id: number;
-  username: string;
-  email: string;
-  phone: string;
-}
+const UserApi = createApi(Marketplace_API_BASE_URL);
 
-export const usersApi = createApi({
-  reducerPath: "usersApi",
-  baseQuery: baseQuery,
-  endpoints: (builder) => ({
-    registration: builder.mutation<RegistrationResponse, RegistrationRequest>({
-      query: (user) => ({
-        url: "/Authentication/Registration",
-        method: "POST",
-        body: user,
-      }),
-    }),
-    login: builder.mutation({
-      query: (body) => ({
-        url: "/Authentication/Login",
-        method: "POST",
-        body,
-      }),
-    }),
-  }),
-});
+const registration = async (params: IRegistrationUser) => {
+  try {
+    await UserApi.post("Authentication/Registration", { body: params });
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+  }
+};
 
-export const { useRegistrationMutation, useLoginMutation } = usersApi;
+const login = async (params: ILoginUser) => {
+  try {
+    const response:ILoginResponse = await UserApi.post(`Authentication/Login`, {
+      body: params,
+    });
+      if (response.token !== null) {
+          AccessTokenStorage.set(response.token);
+      }
+
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+  }
+};
+
+export { registration, login };
