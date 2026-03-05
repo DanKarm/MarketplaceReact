@@ -1,4 +1,6 @@
-﻿const PageNotFound = ()=>{
-    return <div>Page Not Found</div>;
+﻿import ProductList from "../../components/ProductList";
+
+const Products = ()=>{
+    return <div><ProductList/></div>;
 }
-export default PageNotFound;
+export default Products;

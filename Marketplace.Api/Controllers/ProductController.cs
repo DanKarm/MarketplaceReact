@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
-
+using Marketplace.BusinessLogic.Services.Interfaces;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -16,9 +15,10 @@ public class ProductController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll(
         [FromQuery] int page = 1,
-        [FromQuery] int pageSize = 10)
+        [FromQuery] int pageSize = 10,
+        [FromQuery] string? search = null)
     {
-        var result = await _productService.GetAllAsync(page, pageSize);
+        var result = await _productService.GetAllAsync(page, pageSize, search);
         return Ok(result);
     }
 

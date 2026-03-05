@@ -13,7 +13,7 @@ const getAllProducts = async () => {
     }
 };
 
-const getProduct = async (id:string) => {
+const getProduct = async (id:number) => {
     try {
         const Product = await ProductApi.get(`api/Product/${id}`);
         return Product;

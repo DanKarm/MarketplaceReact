@@ -8,6 +8,7 @@ import FaildActivation from "./pages/FaildActivation";
 import SignIn from "./pages/SignIn";
 import PageNotFound from "./pages/PageNotFound";
 import Loyout from "./layout";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -31,7 +32,12 @@ function App() {
           <Route path={appRoutes.activateFail()} element={<FaildActivation />} />
 
           <Route path={appRoutes.signIn()} element={<SignIn />} />
+
+          <Route path={appRoutes.products()} element={<Products/>}/>
+
           <Route path="*" element={<PageNotFound/>} />
+
+
       </Routes>
       </Loyout>
   );

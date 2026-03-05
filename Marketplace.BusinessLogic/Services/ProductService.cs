@@ -11,9 +11,21 @@ public class ProductService : IProductService
         _context = context;
     }
 
-    public async Task<PagedResult<ProductDto>> GetAllAsync(int page, int pageSize)
+    public async Task<PagedResult<ProductDto>> GetAllAsync(//тут ошибка
+        int page,
+        int pageSize,
+        string? search)
     {
-        var query = _context.Products.AsNoTracking();
+        var query = _context.Products
+            .AsNoTracking()
+            .AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            query = query.Where(p =>
+                p.Name.Contains(search) ||
+                p.Description.Contains(search));
+        }
 
         var totalCount = await query.CountAsync();
 
@@ -26,7 +38,7 @@ public class ProductService : IProductService
                 Name = p.Name,
                 Description = p.Description,
                 Price = p.Price,
-                ImageUrl = p.ImageUrl,
+                ImageUrl = p.ImageUrl
             })
             .ToListAsync();
 
@@ -50,7 +62,7 @@ public class ProductService : IProductService
                 Name = p.Name,
                 Description = p.Description,
                 Price = p.Price,
-                ImageUrl = p.ImageUrl,
+                ImageUrl = p.ImageUrl
             })
             .FirstOrDefaultAsync();
     }
