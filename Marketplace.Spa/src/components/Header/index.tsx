@@ -5,10 +5,9 @@ const Header = () => {
   return (
     <header className={style.header}>
       <div className={style.container}>
-        <Link to={appRoutes.home()}>
+        <Link to={appRoutes.products()}>
           <span className={style.Logo}>Logo</span>
         </Link>
-        <input type="search" />
         <nav className={style.headerNavigation}>
           <Link to={appRoutes.cart()}>cart</Link>
           <Link to={appRoutes.contacts()}>contacts</Link>

@@ -1,32 +1,28 @@
-﻿import styles from "./style.module.scss";
-import ProductCard from "../ProductCard";
+﻿import ProductCard from "../ProductCard";
 import type { IProduct } from "../../entity/IProduct";
+import { Box } from "@mui/material";
 
 interface ViewProps {
     products: IProduct[];
-    isLoading: boolean;
 }
 
-const View = ({ products, isLoading }: ViewProps) => {
+const View = ({ products }: ViewProps) => {
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+
 
     if (!products.length) {
         return <div>No products found.</div>;
     }
 
-    const visibleProducts = products.slice(0, 9);
+    const visibleProducts = products.slice(0, 12);
 
     return (
-        <div className={styles.grid}>
-            <div className={styles.mediumContainer}>
+            <Box  sx={{display: 'flex', flexWrap: 'wrap', margin: "0 auto", justifyContent: "center",gap: "1rem"}}>
                 {visibleProducts.map((product) => (
                     <ProductCard key={product.id} data={product} />
                 ))}
-            </div>
-        </div>
+            </Box>
+
     );
 };
 

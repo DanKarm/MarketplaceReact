@@ -2,6 +2,7 @@
 import { useState } from "react";
 import View from "./View";
 import {useGetProductsQuery} from "../../api/ProductApiBQ.ts";
+import { Button, Stack } from "@mui/material";
 
 interface ProductsProps {
     search?: string;
@@ -9,30 +10,45 @@ interface ProductsProps {
 
 const ProductList = ({ search = "" }: ProductsProps) => {
 
-    const [page] = useState(1);
-    const [pageSize] = useState(10);
+    const [page, setPage] = useState(1);
+    const [pageSize] = useState(12);
 
     const { data, isLoading, error } = useGetProductsQuery({
         page,
         pageSize,
         search
     });
-
     const products: IProduct[] = data?.items ?? [];
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+    const handlePreviousPage = () => {
+        if (page > 1) {
+            setPage(prev => prev - 1);
+        }
+
+    };
+
+    const handleNextPage = () => {
+            setPage(prev => prev + 1);
+
+    };
 
     if (error) {
         return <div>Ошибка загрузки товаров</div>;
     }
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return (
+        <>
         <View
             products={products}
-            isLoading={isLoading}
         />
+            <Stack direction="row" spacing={2} justifyContent="center" sx={{ mt: 3 }}>
+                <Button onClick={handlePreviousPage}>Back</Button>
+                <Button onClick={handleNextPage}>Next</Button>
+            </Stack>
+        </>
     );
 };
 

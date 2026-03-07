@@ -1,27 +1,14 @@
-﻿import {configureStore, createSlice} from "@reduxjs/toolkit";
+﻿import { configureStore } from "@reduxjs/toolkit";
+import { productsApi } from "../api/ProductApiBQ";
 
-const counterSlice = createSlice({
-    name: "counter",
-    initialState:{
-        value:0,
-    },
-    reducers: {
-        increment: (state) => {
-            state.value ++;
-        },
-        decrement: (state) => {
-            state.value --;
-        }
-    }
-});
-
-export const {increment, decrement} = counterSlice.actions;
 export const store = configureStore({
-    reducer: counterSlice.reducer,
+    reducer: {
+        [productsApi.reducerPath]: productsApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(productsApi.middleware),
     devTools: true,
 });
 
-store.subscribe(() => {console.log(store.getState())});
-store.dispatch(increment());
-store.dispatch(decrement());
-store.dispatch(decrement());
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

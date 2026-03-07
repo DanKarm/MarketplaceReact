@@ -1,0 +1,104 @@
+Name,Description,Price,CategoryName,CreatedAt,ImageUrl
+iPhone 11,Modern smartphone with OLED,699,phone,2024-01-01 10:00:00,public/productImg/IPhone.webp
+iPhone 12,Fast smartphone with good camera,799,phone,2024-01-02 10:00:00,public/productImg/IPhone.webp
+iPhone 13,Powerful phone with smooth iOS,899,phone,2024-01-03 10:00:00,public/productImg/IPhone.webp
+iPhone 14,Premium phone with bright screen,999,phone,2024-01-04 10:00:00,public/productImg/IPhone.webp
+iPhone 15,Latest smartphone with fast chip,1099,phone,2024-01-05 10:00:00,public/productImg/IPhone.webp
+Galaxy S21,Android phone with great camera,749,phone,2024-01-06 10:00:00,public/productImg/IPhone.webp
+Galaxy S22,Flagship Android phone device,849,phone,2024-01-07 10:00:00,public/productImg/IPhone.webp
+Galaxy S23,Premium Android with OLED panel,949,phone,2024-01-08 10:00:00,public/productImg/IPhone.webp
+Pixel 7,Clean Android phone fast camera,799,phone,2024-01-09 10:00:00,public/productImg/IPhone.webp
+Pixel 8,New Google phone smooth system,899,phone,2024-01-10 10:00:00,public/productImg/IPhone.webp
+Xiaomi 13,Affordable phone strong specs,599,phone,2024-01-11 10:00:00,public/productImg/IPhone.webp
+Xiaomi 14,Modern Xiaomi phone fast chip,699,phone,2024-01-12 10:00:00,public/productImg/IPhone.webp
+OnePlus 11,Fast phone smooth interface,729,phone,2024-01-13 10:00:00,public/productImg/IPhone.webp
+OnePlus 12,Premium phone high performance,829,phone,2024-01-14 10:00:00,public/productImg/IPhone.webp
+Nokia X30,Reliable phone with clean UI,499,phone,2024-01-15 10:00:00,public/productImg/IPhone.webp
+Moto Edge 40,Stylish Android phone device,649,phone,2024-01-16 10:00:00,public/productImg/IPhone.webp
+Sony Xperia 5,Slim phone with good display,799,phone,2024-01-17 10:00:00,public/productImg/IPhone.webp
+Honor Magic 5,Fast modern smartphone device,699,phone,2024-01-18 10:00:00,public/productImg/IPhone.webp
+Realme GT3,Powerful phone with fast charge,649,phone,2024-01-19 10:00:00,public/productImg/IPhone.webp
+Huawei P50,Premium phone with Leica cam,899,phone,2024-01-20 10:00:00,public/productImg/IPhone.webp
+Asus ROG Phone,Gaming phone strong cooling,999,phone,2024-01-21 10:00:00,public/productImg/IPhone.webp
+Oppo Find X5,Modern phone stylish design,799,phone,2024-01-22 10:00:00,public/productImg/IPhone.webp
+Vivo X90,Camera focused flagship phone,899,phone,2024-01-23 10:00:00,public/productImg/IPhone.webp
+Nothing Phone 2,Unique design modern phone,699,phone,2024-01-24 10:00:00,public/productImg/IPhone.webp
+Fairphone 5,Repairable eco friendly phone,649,phone,2024-01-25 10:00:00,public/productImg/IPhone.webp
+
+MacBook Air M1,Light laptop for work tasks,999,laptop,2024-02-01 10:00:00,public/productImg/Laptop.webp
+MacBook Air M2,Thin laptop strong battery life,1199,laptop,2024-02-02 10:00:00,public/productImg/Laptop.webp
+MacBook Pro 14,Professional laptop powerful chip,1999,laptop,2024-02-03 10:00:00,public/productImg/Laptop.webp
+Dell XPS 13,Compact laptop premium design,1399,laptop,2024-02-04 10:00:00,public/productImg/Laptop.webp
+Dell XPS 15,Powerful laptop large display,1799,laptop,2024-02-05 10:00:00,public/productImg/Laptop.webp
+HP Spectre x360,Convertible laptop sleek body,1499,laptop,2024-02-06 10:00:00,public/productImg/Laptop.webp
+HP Envy 14,Stylish laptop for productivity,1199,laptop,2024-02-07 10:00:00,public/productImg/Laptop.webp
+Lenovo ThinkPad X1,Business laptop reliable build,1699,laptop,2024-02-08 10:00:00,public/productImg/Laptop.webp
+Lenovo Yoga 7,Flexible laptop touchscreen mode,1099,laptop,2024-02-09 10:00:00,public/productImg/Laptop.webp
+Acer Swift 3,Affordable slim laptop device,799,laptop,2024-02-10 10:00:00,public/productImg/Laptop.webp
+Acer Predator Helios,Gaming laptop strong cooling,1499,laptop,2024-02-11 10:00:00,public/productImg/Laptop.webp
+Asus ZenBook 14,Compact laptop elegant design,1099,laptop,2024-02-12 10:00:00,public/productImg/Laptop.webp
+Asus ROG Strix,Gaming laptop high performance,1699,laptop,2024-02-13 10:00:00,public/productImg/Laptop.webp
+MSI Stealth 15,Gaming laptop slim powerful,1799,laptop,2024-02-14 10:00:00,public/productImg/Laptop.webp
+MSI Katana 17,Gaming laptop large fast display,1499,laptop,2024-02-15 10:00:00,public/productImg/Laptop.webp
+Razer Blade 14,Premium gaming laptop aluminum,1999,laptop,2024-02-16 10:00:00,public/productImg/Laptop.webp
+Samsung Galaxy Book,Light laptop modern ecosystem,1099,laptop,2024-02-17 10:00:00,public/productImg/Laptop.webp
+Huawei MateBook X,Slim laptop high resolution,1299,laptop,2024-02-18 10:00:00,public/productImg/Laptop.webp
+LG Gram 16,Ultra light laptop huge battery,1399,laptop,2024-02-19 10:00:00,public/productImg/Laptop.webp
+Surface Laptop 5,Microsoft laptop smooth system,1299,laptop,2024-02-20 10:00:00,public/productImg/Laptop.webp
+Surface Book 3,Hybrid laptop tablet device,1599,laptop,2024-02-21 10:00:00,public/productImg/Laptop.webp
+Dell Inspiron 15,Affordable laptop daily tasks,799,laptop,2024-02-22 10:00:00,public/productImg/Laptop.webp
+HP Pavilion 15,Home laptop balanced specs,749,laptop,2024-02-23 10:00:00,public/productImg/Laptop.webp
+Acer Aspire 5,Popular laptop good price value,699,laptop,2024-02-24 10:00:00,public/productImg/Laptop.webp
+Lenovo IdeaPad 5,Midrange laptop smooth work,799,laptop,2024-02-25 10:00:00,public/productImg/Laptop.webp
+
+Sony WH1000XM5,Noise cancelling premium audio,399,headphones,2024-03-01 10:00:00,public/productImg/Headphones.webp
+Sony WH1000XM4,Great headphones long battery,349,headphones,2024-03-02 10:00:00,public/productImg/Headphones.webp
+AirPods Pro 2,Wireless earbuds active noise,249,headphones,2024-03-03 10:00:00,public/productImg/Headphones.webp
+AirPods Max,Apple premium over ear audio,549,headphones,2024-03-04 10:00:00,public/productImg/Headphones.webp
+Bose QC45,Comfortable headphones clear sound,329,headphones,2024-03-05 10:00:00,public/productImg/Headphones.webp
+Bose QC Ultra,Advanced headphones deep bass,429,headphones,2024-03-06 10:00:00,public/productImg/Headphones.webp
+Sennheiser Momentum,Premium audio stylish build,399,headphones,2024-03-07 10:00:00,public/productImg/Headphones.webp
+Sennheiser HD560,Studio headphones accurate sound,199,headphones,2024-03-08 10:00:00,public/productImg/Headphones.webp
+JBL Tune 760,Affordable wireless headphones,129,headphones,2024-03-09 10:00:00,public/productImg/Headphones.webp
+JBL Live 660,Wireless headphones strong bass,179,headphones,2024-03-10 10:00:00,public/productImg/Headphones.webp
+Logitech G Pro X,Gaming headset clear mic audio,129,headphones,2024-03-11 10:00:00,public/productImg/Headphones.webp
+HyperX Cloud II,Comfort gaming headset durable,99,headphones,2024-03-12 10:00:00,public/productImg/Headphones.webp
+SteelSeries Arctis 7,Wireless gaming headset device,149,headphones,2024-03-13 10:00:00,public/productImg/Headphones.webp
+Razer BlackShark V2,Esports headset precise sound,139,headphones,2024-03-14 10:00:00,public/productImg/Headphones.webp
+Beats Studio 3,Stylish headphones strong bass,299,headphones,2024-03-15 10:00:00,public/productImg/Headphones.webp
+Beats Solo 3,On ear wireless music headset,199,headphones,2024-03-16 10:00:00,public/productImg/Headphones.webp
+AKG K371,Studio headphones balanced audio,179,headphones,2024-03-17 10:00:00,public/productImg/Headphones.webp
+Shure Aonic 50,Premium headphones studio sound,349,headphones,2024-03-18 10:00:00,public/productImg/Headphones.webp
+Marshall Major IV,Retro headphones strong battery,149,headphones,2024-03-19 10:00:00,public/productImg/Headphones.webp
+Marshall Monitor II,Noise cancelling rock style,299,headphones,2024-03-20 10:00:00,public/productImg/Headphones.webp
+Edifier W820NB,Affordable ANC headphones device,99,headphones,2024-03-21 10:00:00,public/productImg/Headphones.webp
+Anker Soundcore Q30,Wireless headphones great value,89,headphones,2024-03-22 10:00:00,public/productImg/Headphones.webp
+Philips PH805,Comfort headphones clean sound,129,headphones,2024-03-23 10:00:00,public/productImg/Headphones.webp
+Bang Olufsen HX,Luxury headphones premium build,499,headphones,2024-03-24 10:00:00,public/productImg/Headphones.webp
+Bowers PX7,Premium headphones deep sound,399,headphones,2024-03-25 10:00:00,public/productImg/Headphones.webp
+
+Blue Yeti USB,USB microphone clear studio audio,129,microphone,2024-04-01 10:00:00,public/productImg/microphone.webp
+Blue Yeti Nano,Compact microphone streaming audio,99,microphone,2024-04-02 10:00:00,public/productImg/microphone.webp
+Rode NT USB,Studio microphone plug and play,169,microphone,2024-04-03 10:00:00,public/productImg/microphone.webp
+Rode PodMic,Podcast microphone rich voice tone,119,microphone,2024-04-04 10:00:00,public/productImg/microphone.webp
+Shure SM7B,Legendary broadcast microphone pro,399,microphone,2024-04-05 10:00:00,public/productImg/microphone.webp
+Shure MV7,USB XLR hybrid streaming mic,249,microphone,2024-04-06 10:00:00,public/productImg/microphone.webp
+HyperX QuadCast,Streaming microphone RGB design,149,microphone,2024-04-07 10:00:00,public/productImg/microphone.webp
+HyperX SoloCast,Compact mic for streaming setup,79,microphone,2024-04-08 10:00:00,public/productImg/microphone.webp
+Elgato Wave 3,Streaming microphone digital mix,159,microphone,2024-04-09 10:00:00,public/productImg/microphone.webp
+Elgato Wave 1,Entry streaming microphone device,129,microphone,2024-04-10 10:00:00,public/productImg/microphone.webp
+AudioTechnica AT2020,Studio condenser microphone,99,microphone,2024-04-11 10:00:00,public/productImg/microphone.webp
+AudioTechnica AT2035,Professional studio microphone,149,microphone,2024-04-12 10:00:00,public/productImg/microphone.webp
+Samson Q2U,USB XLR dynamic microphone device,79,microphone,2024-04-13 10:00:00,public/productImg/microphone.webp
+Samson Meteor,USB condenser desktop microphone,89,microphone,2024-04-14 10:00:00,public/productImg/microphone.webp
+Fifine K669B,Budget microphone clear voice,49,microphone,2024-04-15 10:00:00,public/productImg/microphone.webp
+Fifine T669,Streaming kit microphone bundle,79,microphone,2024-04-16 10:00:00,public/productImg/microphone.webp
+Maono AU PM421,USB microphone streaming device,89,microphone,2024-04-17 10:00:00,public/productImg/microphone.webp
+Maono PD400X,Dynamic microphone podcast voice,129,microphone,2024-04-18 10:00:00,public/productImg/microphone.webp
+Razer Seiren X,Compact gaming microphone device,99,microphone,2024-04-19 10:00:00,public/productImg/microphone.webp
+Razer Seiren Mini,Small microphone streaming setup,59,microphone,2024-04-20 10:00:00,public/productImg/microphone.webp
+Trust GXT 252,Streaming microphone clear voice,79,microphone,2024-04-21 10:00:00,public/productImg/microphone.webp
+Trust Mantis,Entry microphone simple streaming,49,microphone,2024-04-22 10:00:00,public/productImg/microphone.webp
+Tonor TC30,USB microphone beginner streaming,39,microphone,2024-04-23 10:00:00,public/productImg/microphone.webp
+Tonor Q9,Streaming microphone with arm stand,69,microphone,2024-04-24 10:00:00,public/productImg/microphone.webp
+Behringer XM8500,Dynamic microphone stage vocal,29,microphone,2024-04-25 10:00:00,public/productImg/microphone.webp
