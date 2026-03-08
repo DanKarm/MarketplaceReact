@@ -1,5 +1,7 @@
 ﻿import { Box, Button, Card, CardContent, CardMedia, Typography, CardActions } from "@mui/material";
 import type {IProduct} from "../../entity/IProduct.ts";
+import { Link } from "react-router";
+import {appRoutes} from "../../routes.ts";
 
 interface IProductCard {
     data: IProduct;
@@ -30,7 +32,7 @@ const ProductCard = ({ data }: IProductCard) => {
                 <CardContent>
                     <Box sx={{ display: "flex", flexDirection: "column" }}>
                         <Typography>{data.price}$</Typography>
-                        <Typography variant="h6">{data.name}</Typography>
+                        <Link to={appRoutes.product(data.id.toString())}><Typography variant="h6" >{data.name}</Typography> </Link>
                     </Box>
                 </CardContent>
 

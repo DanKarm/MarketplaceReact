@@ -33,6 +33,8 @@ builder.Services.AddScoped<IHashHelper, HashHelper>();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 
+builder.Services.AddScoped<ICartService, CartService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

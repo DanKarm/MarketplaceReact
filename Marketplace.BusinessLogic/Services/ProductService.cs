@@ -63,7 +63,8 @@ public class ProductService : IProductService
                 Name = p.Name,
                 Description = p.Description,
                 Price = p.Price,
-                ImageUrl = p.ImageUrl
+                ImageUrl = p.ImageUrl,
+                category = p.CategoryName
             })
             .FirstOrDefaultAsync();
     }

@@ -9,6 +9,7 @@ import SignIn from "./pages/SignIn";
 import PageNotFound from "./pages/PageNotFound";
 import Loyout from "./layout";
 import Products from "./pages/Products";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path={appRoutes.signIn()} element={<SignIn />} />
 
           <Route path={appRoutes.products()} element={<Products/>}/>
+          <Route path={appRoutes.product(":productId")} element={<ProductPage/>}/>
 
           <Route path="*" element={<PageNotFound/>} />
 
