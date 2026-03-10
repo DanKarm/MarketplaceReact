@@ -1,10 +1,14 @@
-﻿using Marketplace.BusinessLogic.Dtos.Cart;
-
+﻿
 namespace Marketplace.Api.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+using Marketplace.BusinessLogic.Dtos.Cart;
+using Microsoft.AspNetCore.Authorization;
+using Marketplace.BusinessLogic.Models.Cart;
 
 [ApiController]
 [Route("api/cart")]
+[Authorize]
 public class CartController : ControllerBase
 {
     private readonly ICartService _cartService;
@@ -14,61 +18,77 @@ public class CartController : ControllerBase
         _cartService = cartService;
     }
 
+    private int GetUserId()
+    {
+        return int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetCart()
     {
-        var userId = 123;
+        var userId = GetUserId();
 
         var cart = await _cartService.GetCartAsync(userId);
 
+
+
+        if (cart == null)
+            cart = new Cart
+            {
+                Items = new List<CartItem>()
+            };
+
         return Ok(cart);
     }
 
-    [HttpPost]
-    public async Task<IActionResult> AddToCart(AddToCartDto dto)
+    [HttpPost("add")]
+    public async Task<IActionResult> AddToCart(AddToCartDto dto) // из API
     {
-        var userId = 123;
+        var userId = GetUserId();
 
-        var cart = await _cartService.AddToCartAsync(userId, dto);
+        var serviceDto = new AddToCartDto
+        {
+            ProductId = dto.ProductId,
+            Quantity = dto.Quantity
+        };
 
+        var cart = await _cartService.AddToCartAsync(userId, serviceDto);
         return Ok(cart);
     }
 
-    [HttpPut("{productId}")]
-    public async Task<IActionResult> UpdateItem(
-        int productId,
-        UpdateCartItemDto dto)
+    [HttpPut("update")]
+    public async Task<IActionResult> UpdateItem(int productId, int quantity)
     {
-        var userId = 123;
+        var userId = GetUserId();
 
-        var cart = await _cartService.UpdateItemAsync(
-            userId,
-            productId,
-            dto.Quantity);
+        var cart = await _cartService.UpdateItemAsync(userId, productId, quantity);
+
+        if (cart == null)
+            return NotFound();
 
         return Ok(cart);
     }
 
-    [HttpDelete("{productId}")]
+    [HttpDelete("remove")]
     public async Task<IActionResult> RemoveItem(int productId)
     {
-        var userId = 123;
+        var userId = GetUserId();
 
         var result = await _cartService.RemoveItemAsync(userId, productId);
 
         if (!result)
             return NotFound();
 
-        return NoContent();
+        return Ok();
     }
 
-    [HttpDelete]
+    [HttpDelete("clear")]
     public async Task<IActionResult> ClearCart()
     {
-        var userId = 123;
+        var userId = GetUserId();
 
         await _cartService.ClearCartAsync(userId);
 
-        return NoContent();
+        return Ok();
     }
 }

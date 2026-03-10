@@ -1,38 +1,49 @@
 ﻿import { createApi } from "@reduxjs/toolkit/query/react";
-import baseQuery from "./baseQuery.ts";
-interface RegistrationRequest {
-  username: string;
-  email: string;
-  password: string;
-  phone: string;
-}
+import baseQuery from "./baseQuery";
+import type { ILoginUser, IRegistrationUser } from "../entity/IUser";
+import { AccessTokenStorage } from "../services/AuthStorage";
+import { setAuth } from "../app/isAuthSlice";
 
-interface RegistrationResponse {
-  id: number;
-  username: string;
-  email: string;
-  phone: string;
+interface LoginResponse {
+    token: string;
 }
 
 export const usersApi = createApi({
-  reducerPath: "usersApi",
-  baseQuery: baseQuery,
-  endpoints: (builder) => ({
-    registration: builder.mutation<RegistrationResponse, RegistrationRequest>({
-      query: (user) => ({
-        url: "/Authentication/Registration",
-        method: "POST",
-        body: user,
-      }),
+    reducerPath: "usersApi",
+    baseQuery,
+    endpoints: (build) => ({
+
+        login: build.mutation<LoginResponse, ILoginUser>({
+            query: (body) => ({
+                url: "Authentication/Login",
+                method: "POST",
+                body,
+            }),
+
+            async onQueryStarted(_, { dispatch, queryFulfilled }) {
+                try {
+                    const { data } = await queryFulfilled;
+
+                    AccessTokenStorage.set(data.token);
+
+                    dispatch(setAuth(true));
+
+                } catch {}
+            },
+        }),
+
+        registration: build.mutation<void, IRegistrationUser>({
+            query: (body) => ({
+                url: "Authentication/Registration",
+                method: "POST",
+                body,
+            }),
+        }),
+
     }),
-    login: builder.mutation({
-      query: (body) => ({
-        url: "/Authentication/Login",
-        method: "POST",
-        body,
-      }),
-    }),
-  }),
 });
 
-export const { useRegistrationMutation, useLoginMutation } = usersApi;
+export const {
+    useLoginMutation,
+    useRegistrationMutation,
+} = usersApi;

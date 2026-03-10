@@ -76,7 +76,7 @@ public class AuthenticationController : ControllerBase
     {
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sid, userId.ToString())
+            new Claim(ClaimTypes.NameIdentifier, userId.ToString())
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenSettings.Secret));

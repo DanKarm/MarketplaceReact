@@ -2,12 +2,21 @@
 import type {IProduct} from "../../entity/IProduct.ts";
 import { Link } from "react-router";
 import {appRoutes} from "../../routes.ts";
+import {useAddToCartMutation} from "../../api/CartApi.ts";
 
 interface IProductCard {
     data: IProduct;
 }
 
 const ProductCard = ({ data }: IProductCard) => {
+    const [addToCart] = useAddToCartMutation();
+
+    const handleAdd = () => {
+        addToCart({
+            productId: data.id,
+            quantity: 1,
+        });
+    };
     return (
         <Card
             sx={{
@@ -37,7 +46,7 @@ const ProductCard = ({ data }: IProductCard) => {
                 </CardContent>
 
                 <CardActions>
-                    <Button variant="contained" sx={{ width: "100%" }}>
+                    <Button variant="contained" sx={{ width: "100%" }} onClick={handleAdd}>
                         To Cart
                     </Button>
                 </CardActions>
